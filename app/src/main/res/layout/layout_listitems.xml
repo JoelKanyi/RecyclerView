@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:id="@+id/parent_layout">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/image"
+            android:src="@mipmap/ic_launcher"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="JoelKanyi"
+            android:id="@+id/userName"
+            android:textStyle="italic"
+            android:textColor="#000"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="110dp"
+            android:textSize="18sp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="https://Github.com/JoelKanyi"
+            android:id="@+id/developerUrl"
+            android:layout_marginTop="55dp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_marginLeft="110dp"
+            android:textSize="18sp"/>
+</RelativeLayout>
