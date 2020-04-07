@@ -15,7 +15,6 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         getSupportActionBar().hide();
 
         recyclerView = findViewById(R.id.recycler_view);
@@ -39,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         developersLists = new ArrayList<>();
-
         loadURLs();
     }
 
@@ -54,24 +51,20 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(String response) {
                 progressDialog.dismiss();
                 try {
-
-
                     RecyclerView recyclerView = findViewById(R.id.recycler_view);
                     JSONObject jsonObject = new JSONObject(response);
                     JSONArray jsonArray = jsonObject.getJSONArray("items");
 
                     for (int i = 0; i < jsonArray.length(); i++) {
                         JSONObject jobj = jsonArray.getJSONObject(i);
-
                         DevelopersList developers = new DevelopersList(jobj.getString("login"), jobj.getString("html_url"),
                                 jobj.getString("avatar_url"));
                         developersLists.add(developers);
                     }
                     adapter = new RecyclerView_Adapter(developersLists, getApplicationContext());
                     recyclerView.setAdapter(adapter);
-
-
-                } catch (JSONException e) {
+                } 
+                catch (JSONException e) {
                     e.printStackTrace();
                 }
             }
@@ -81,7 +74,6 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this,"Error: "+error.toString(),Toast.LENGTH_SHORT).show();
             }
         });
-
         RequestQueue requestQueue  = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
     }
