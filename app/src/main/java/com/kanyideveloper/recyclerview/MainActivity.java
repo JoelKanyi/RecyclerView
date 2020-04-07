@@ -40,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
         loadURLs();
     }
 
-
     private void loadURLs(){
         final ProgressDialog progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Loading...");
