@@ -24,10 +24,8 @@ public class RecyclerView_Adapter extends RecyclerView.Adapter<RecyclerView_Adap
     public RecyclerView_Adapter(List<DevelopersList> developersLists, Context context) {
 
         //Initialize the List and Context
-
         this.developersLists = developersLists;
         this.context = context;
-
     }
 
     @NonNull
@@ -40,11 +38,9 @@ public class RecyclerView_Adapter extends RecyclerView.Adapter<RecyclerView_Adap
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
-
-        //Creating an object of the Developer list class
+        
         final DevelopersList developersList = developersLists.get(position);
-
-
+        
         holder.userName.setText(developersList.getDetails());
         holder.url.setText(developersList.getGithub_url());
 
@@ -55,7 +51,7 @@ public class RecyclerView_Adapter extends RecyclerView.Adapter<RecyclerView_Adap
         holder.parentLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Toast.makeText(MainActivity.this,developersList.getDetails(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this,developersList.getDetails(),Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -66,7 +62,6 @@ public class RecyclerView_Adapter extends RecyclerView.Adapter<RecyclerView_Adap
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
-
         CircleImageView image;
         TextView userName;
         TextView url;
