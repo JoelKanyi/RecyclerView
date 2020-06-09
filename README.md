@@ -47,7 +47,4 @@ Please feel free to contact me if you have any questions, ideas or even if you j
 References
 ----------
 
-- https://material.io/develop/android/components/navigation-view/
-- https://www.simplifiedcoding.net/android-navigation-drawer-example-using-fragments/
-- https://code.tutsplus.com/tutorials/how-to-code-a-navigation-drawer-in-an-android-app--cms-30263
 
